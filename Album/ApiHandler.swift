@@ -2,7 +2,7 @@
 //  File.swift
 //  Album
 //
-//  Created by jaafar zubaidi on 6/2/22.
+//  Created by Raghad Alaa on 6/2/22.
 //
 
 import Foundation
