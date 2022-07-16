@@ -25,10 +25,7 @@ class ViewController: UIViewController , viewModelprotocol {
             DispatchQueue.main.async {
                 self.tbl.reloadData()
             }
-        }
-    }
-    
-
+        }}
 
 }
 extension ViewController : UITableViewDataSource , UITableViewDelegate{
