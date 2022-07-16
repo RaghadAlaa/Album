@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Album" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5q9-Ck-psE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="128" id="hUv-4I-sNi" customClass="CustomTableViewCell" customModule="Album" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hUv-4I-sNi" id="ADq-5L-P4y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3q-Zv-k7O">
+                                                    <rect key="frame" x="153" y="10" width="108" height="108"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="108" id="hQY-L8-jlV"/>
+                                                        <constraint firstAttribute="height" constant="108" id="zUv-P8-ug0"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J3q-Zv-k7O" firstAttribute="centerX" secondItem="ADq-5L-P4y" secondAttribute="centerX" id="Cig-mf-i1r"/>
+                                                <constraint firstAttribute="bottom" secondItem="J3q-Zv-k7O" secondAttribute="bottom" constant="10" id="fdN-3i-TKF"/>
+                                                <constraint firstItem="J3q-Zv-k7O" firstAttribute="centerY" secondItem="ADq-5L-P4y" secondAttribute="centerY" id="xHe-qr-mki"/>
+                                                <constraint firstItem="J3q-Zv-k7O" firstAttribute="top" secondItem="ADq-5L-P4y" secondAttribute="top" constant="10" id="zte-BY-YmI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="J3q-Zv-k7O" id="DKf-56-6S3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="axM-uG-rcd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lx0-Uu-Zrz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5q9-Ck-psE" secondAttribute="bottom" id="Jz5-aG-5aB"/>
+                            <constraint firstItem="5q9-Ck-psE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dfs-OJ-jrJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5q9-Ck-psE" secondAttribute="trailing" id="gKo-sF-ixR"/>
+                            <constraint firstItem="5q9-Ck-psE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kaO-Th-Nrv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tbl" destination="5q9-Ck-psE" id="VqK-An-yMP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
